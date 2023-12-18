@@ -92,3 +92,15 @@
     margin: 20px 0;
     padding: 10px 20px;
 }
+
+.background-img{
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.group-avatar-img{
+    border-radius: 50%;
+    width: 75px;
+    justify-content: center;
+    margin-top: 15%;
+}
