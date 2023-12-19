@@ -82,7 +82,7 @@ const GroupCard = () => {
   ];
 
   return (
-    <div className="page">
+    <div className="page-Group-Card">
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3">
           {groups.map((group, cardId) => (

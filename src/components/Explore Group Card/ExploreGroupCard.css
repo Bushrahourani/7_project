@@ -1,8 +1,17 @@
 
-.page-Group-Card{
+.page{
     justify-content: center;
+    background-color:#eff2f6;
+
+    padding: 2rem 0;
+    margin: 2rem 0;
 }
 
+.explore-groups{
+    font-size: x-large;
+    font-weight: bold;
+    padding: 10px;
+}
 .col{
     padding: 5px;
     margin: 0px;
@@ -53,45 +62,7 @@
     background-color: white;
 }
 
-.join-group{
-    initial-value: Join Group;
-    background-color: #e9f8f3;
-    color: #60c39b;
-    border-radius: 5px;
-    border-style: none;
-    margin: 20px 0;
-    padding: 10px 20px;
-}
 
-.leave-group{
-    initial-value: Join Group;
-    background-color: #fbe8eb;
-    color:#db3375;
-    border-radius: 5px;
-    border-style: none;
-    margin: 20px 0;
-    padding: 10px 20px;
-}
-
-.join-group:hover{
-    initial-value: Join Group;
-    background-color: #60c39b;
-    color:#e9f8f3;
-    border-radius: 5px;
-    border-style: none;
-    margin: 20px 0;
-    padding: 10px 20px;
-}
-
-.leave-group:hover{
-    initial-value: Join Group;
-    background-color: #db3375;
-    color:#fbe8eb;
-    border-radius: 5px;
-    border-style: none;
-    margin: 20px 0;
-    padding: 10px 20px;
-}
 
 .background-img{
     background-repeat: no-repeat;

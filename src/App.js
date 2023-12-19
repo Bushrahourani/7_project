@@ -1,12 +1,22 @@
 
 
+import GlobalConference from "./components/Global Conference/GlobalConference";
+import ExploreGroupCard from "./components/Explore Group Card/ExploreGroupCard";
+import GroupCard from "./components/Group Card/GroupCard";
+
+
+
+
+
 
 function App() {
 
 
     return (
         <div className="App">
-            <div>Hi</div>
+            <GroupCard></GroupCard>
+            <GlobalConference></GlobalConference>
+            <ExploreGroupCard></ExploreGroupCard>
         </div>
     );
 }
