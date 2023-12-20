@@ -1,21 +1,5 @@
-import { click } from "@testing-library/user-event/dist/click";
 import "./ExploreGroupCard.css";
 
-
-
-import GroupImage1 from "./images/NP1.png";
-import GroupImage2 from "./images/NP2.png";
-import GroupImage3 from "./images/NP3.png";
-
-
-import GroupAvatar1 from "./images/groupsAvatar.png"
-import GroupAvatar2 from "./images/groupsAvatar.png"
-import GroupAvatar3 from "./images/groupsAvatar.png"
-
-
-import membersList1 from "./images/membersList1.png";
-import membersList2 from "./images/membersList2.png";
-import membersList3 from "./images/membersList3.png";
 
 
 
@@ -52,18 +36,6 @@ const ExploreGroupCard = () => {
       getGroups();
   },[]);
     
-  const images = [
-    {status: GroupImage1, avatar:GroupAvatar1},
-    {status: GroupImage2, avatar:GroupAvatar2},
-    {status: GroupImage3, avatar:GroupAvatar3},
-  ]
-
-
-  const listImages = [
-    membersList1,
-    membersList2,
-    membersList3,
-  ];
 
     return (
       <div className="EGPage">
@@ -74,15 +46,9 @@ const ExploreGroupCard = () => {
               {groups.map((group, cardId) => (
                 <div className=" col EGCol" key={group.id}>
                 <div className="EGCard">
-                  {images.map((image,index) => {
-                      if(cardId === index){
-                        return (
-                          <div className="EGBackground-img" key={index} style={{ backgroundImage: `url(${image.status})` }}>
-                              <img className="EGAvatar-img" src={image.avatar}   alt="avatar" />
-                          </div>
-                        )
-                      }
-                      })}
+                    <div className="EGBackground-img" style={{ backgroundImage: `url(${group.statusPicture})` }}>
+                      <img className="EGAvatar-img" src={group.avatarPicture}   alt="avatar" />
+                    </div>
                   <div className="EGCard-body">
                     <div className="EGCard-title">  {group.title}</div>
                     <div className="EGGroup-status" > {group.status === "Public" ? (<i className="bi bi-globe EGIcon"></i>) : (<i className="bi bi-lock EGIcon"></i>)} {group.status} Group</div>
@@ -97,15 +63,9 @@ const ExploreGroupCard = () => {
                         <div className="EGText">Post per day</div>
                       </div>
                     </div>
-                    {listImages[cardId] && (
                       <div className="EGMembers-list">
-                        <img
-                          className="EGMember-list-img"
-                          src={listImages[cardId]}
-                          alt="member-list"
-                        />
+                        <img className="EGMember-list-img" src={group.listPicture} alt="member-list" />
                       </div>
-                    )}
                   </div>
               
                 </div>

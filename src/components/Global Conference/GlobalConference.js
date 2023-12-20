@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react";
-import { collection, getDocs , updateDoc  } from "@firebase/firestore";
+import { collection, getDocs} from "@firebase/firestore";
 
 
 
@@ -9,10 +9,6 @@ import { db } from "../../firebase";
 
 
 import"./GlobalConference.css"
-import QR from "./images/QR.png"
-import conferenceImage from "./images/conference.png"
-import CML from "./images/conferenceMembersList.png"
-
 
 
 
@@ -48,11 +44,11 @@ const GlobalConference = () => {
                 className="CRow row justify-content-center row-cols-1 row-cols-xs-auto row-cols-sm-1 row-cols-md-1  row-cols-lg-auto row-cols-xl-auto row-cols-xxl-2 "
               >
                 <div className="col CInfo">
-                  <img src={conferenceImage} alt="image"></img>
+                  <img src={conference.statusPicture} alt="image"></img>
                   <div className="CTitle">{conference.title}</div>
                   <div className="CDisruption">{conference.description}</div>
                   <div className="CMembers">
-                    <img src={CML} alt="members-list"></img>
+                    <img src={conference.listPicture} alt="members-list"></img>
                     <div>are attending</div>
                   </div>
                 </div>
@@ -87,7 +83,7 @@ const GlobalConference = () => {
                       <div className="CCard CCardRight">
                         <div className="CNumber"></div>
                         <div className="CBook-button">
-                          <img className="CQR" src={QR} alt=""></img>
+                          <img className="CQR" src={conference.QRCode} alt=""></img>
                           <button className="CBook">
                             <i className="bi bi-ticket-fill"></i> Book Now
                           </button>
