@@ -1,77 +1,85 @@
 
-.page{
+.EGPage{
     justify-content: center;
     background-color:#eff2f6;
-
     padding: 2rem 0;
     margin: 2rem 0;
+    text-align: center;
 }
 
-.explore-groups{
+.EGExplore-groups{
     font-size: x-large;
     font-weight: bold;
     padding: 10px;
 }
-.col{
+.EGCol{
     padding: 5px;
     margin: 0px;
 }
-.card{
+.EGCard{
     padding: 0;
     margin: 5px;
+    border: 1px ;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 0.425);
+    border-radius: 3px;
 } 
 
-.card-title{
+.EGCard-title{
     font-size: x-large;
     font-weight: bold;
     margin: 0;
 }
-.group-status{
+.EGGroup-status{
     font-size: small;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.number{
+.EGNumber{
     font-size: large;
     font-weight: bold;
 }
 
-.text{
+.EGText{
     font-size: small; 
 }
 
-.members-num{
+.EGMembers-num{
     border-right: 1px solid rgba(48, 48, 48, 0.644);
     height: 40px;
 }
 
-.statistical-info{
+.EGStatistical-info{
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.member-list-img{
+.EGMember-list-img{
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.card-footer{
+.EGCard-footer{
     background-color: white;
 }
 
 
 
-.background-img{
+.EGBackground-img{
     background-repeat: no-repeat;
     background-size:contain;
 }
 
-.group-avatar-img{
+.EGAvatar-img{
     border-radius: 50%;
     width: 75px;
     justify-content: center;
     margin-top: 15%;
 }
+.EGIcon{
+    margin-right: 5px;
+}
+

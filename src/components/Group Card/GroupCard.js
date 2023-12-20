@@ -86,48 +86,47 @@ const GroupCard = () => {
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3">
           {groups.map((group, cardId) => (
-            <div className="col" key={group.id}>
-              <div className="card">
+            <div className="col GC-col" key={group.id}>
+              <div className="GCard ">
               {images.map((image,index) => {
                       if(cardId === index){
                         return (
-                          <div className="background-img" key={index} style={{ backgroundImage: `url(${image.status})` }}>
-                              <img className="group-avatar-img" src={image.avatar}   alt="avatar" />
+                          <div className="GCBackground-img" key={index} style={{ backgroundImage: `url(${image.status})` }}>
+                              <img className="GCAvatar-img" src={image.avatar}   alt="avatar" />
                           </div>
                         )
                       }
               })}
-                <div className="card-body">
-                  <div className="card-title">{group.title}</div>
-                  <div className="group-status">
+                <div className="GCard-body">
+                  <div className="GCard-title">{group.title}</div>
+                  <div className="GCGroup-status">
                     {group.status === "Public" ? (
-                      <i className="bi bi-globe"></i>
+                      <i className="bi bi-globe GCIcon"></i>
                     ) : (
-                      <i className="bi bi-lock"></i>
+                      <i className="bi bi-lock  GCIcon"></i>
                     )}
                     {group.status} Group
                   </div>
-                  <div className="statistical-info row">
-                    <div className="members-num col-3">
-                      <div className="number">{group.membersNum}</div>
-                      <div className="text">Members</div>
+                  <div className="GCStatistical-info row">
+                    <div className="GCMembers-num col-3">
+                      <div className="GCNumber">{group.membersNum}</div>
+                      <div className="GCText">Members</div>
                     </div>
                     <div className="post-per-day-number col-3">
-                      <div className="number">{group.postPerDay}</div>
-                      <div className="text">Post per day</div>
+                      <div className="GCNumber">{group.postPerDay}</div>
+                      <div className="GCText">Post per day</div>
                     </div>
                   </div>
                   {listImages[cardId] && (
-                    <div className="members-list">
+                    <div className="GCMembers-list">
                       <img
-                        className="member-list-img"
+                        className="GCMember-list-img"
                         src={listImages[cardId]}
                         alt="Member list"
                       />
                     </div>
                   )}
                 </div>
-             
               </div>
             </div>
           ))}

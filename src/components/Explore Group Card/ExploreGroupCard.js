@@ -66,44 +66,43 @@ const ExploreGroupCard = () => {
   ];
 
     return (
-      <div className="page">
-       
-        <div className=" container text-center">
-        <div className="explore-groups row ">Explore Groups</div>
+      <div className="EGPage">
+        <div className=" container EGText-center">
+        <div className="EGExplore-groups row ">Explore Groups</div>
           <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3 ">
             
               {groups.map((group, cardId) => (
-                <div className="col" key={group.id}>
-                <div className="card">
+                <div className=" col EGCol" key={group.id}>
+                <div className="EGCard">
                   {images.map((image,index) => {
                       if(cardId === index){
                         return (
-                          <div className="background-img" key={index} style={{ backgroundImage: `url(${image.status})` }}>
-                              <img className="group-avatar-img" src={image.avatar}   alt="avatar" />
+                          <div className="EGBackground-img" key={index} style={{ backgroundImage: `url(${image.status})` }}>
+                              <img className="EGAvatar-img" src={image.avatar}   alt="avatar" />
                           </div>
                         )
                       }
                       })}
-                  <div className="card-body">
-                    <div className="card-title">  {group.title}</div>
-                    <div className="group-status" > {group.status === "Public" ? (<i className="bi bi-globe"></i>) : (<i className="bi bi-lock"></i>)} {group.status} Group</div>
-                    <div className="statistical-info row">
-                      <div className="members-num col-3">
-                        <div className="number" >{group.membersNum}</div>
-                        <div className="text">Members</div>
+                  <div className="EGCard-body">
+                    <div className="EGCard-title">  {group.title}</div>
+                    <div className="EGGroup-status" > {group.status === "Public" ? (<i className="bi bi-globe EGIcon"></i>) : (<i className="bi bi-lock EGIcon"></i>)} {group.status} Group</div>
+                    <div className="EGStatistical-info row">
+                      <div className="EGMembers-num col-3">
+                        <div className="EGNumber" >{group.membersNum}</div>
+                        <div className="EGText">Members</div>
                       </div>
 
-                      <div className="post-per-day-number col-3">
-                        <div className="number">{group.postPerDay}</div>
-                        <div className="text">Post per day</div>
+                      <div className="EGCost-per-day-number col-3">
+                        <div className="EGNumber">{group.postPerDay}</div>
+                        <div className="EGText">Post per day</div>
                       </div>
                     </div>
                     {listImages[cardId] && (
-                      <div className="members-list">
+                      <div className="EGMembers-list">
                         <img
-                          className="member-list-img"
+                          className="EGMember-list-img"
                           src={listImages[cardId]}
-                          alt="Member list"
+                          alt="member-list"
                         />
                       </div>
                     )}
