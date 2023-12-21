@@ -50,7 +50,7 @@
 .GCMember-list-img{
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .GCFard-footer{
@@ -71,4 +71,8 @@
 
 .GCIcon{
     margin-right: 5px;
+}
+.GCButton{
+    border-top: 1px solid rgba(153, 153, 153, 0.425);
+    
 }

@@ -1,8 +1,8 @@
 import "./GroupCard.css";
-
-
+import "../button Card/button.css";
+import BottomCard from "../button Card/button.js";
 import { useEffect, useState } from "react";
-import { collection, getDocs} from "@firebase/firestore";
+import { collection, getDocs, updateDoc, doc } from "@firebase/firestore";
 
 import { db } from "../../firebase";
 
@@ -18,14 +18,13 @@ const GroupCard = () => {
         const filteredData = data.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-          joined: false, // Assuming a 'joined' field in your Firestore documents
         }));
 
         setGroups(filteredData);
 
         let initialStatus = {};
         filteredData.forEach((group) => {
-          initialStatus[group.id] = group.joined;
+          initialStatus[group.id] = group.buttonValue === "Joined";
         });
         setJoinStatus(initialStatus);
       } catch (error) {
@@ -35,8 +34,25 @@ const GroupCard = () => {
 
     getGroups();
   }, []);
+  const handleJoinLeave = async (groupId) => {
+    const currentStatus = joinStatus[groupId];
+    const newStatus = !currentStatus;
+    const groupRef = doc(db, "groups", groupId);
 
-  // Function to update the number of members for a specific group
+    try {
+      await updateDoc(groupRef, {
+        buttonValue: newStatus ? "Joined" : "Not Joined",
+      });
+
+      setJoinStatus((prevStatus) => ({
+        ...prevStatus,
+        [groupId]: newStatus,
+      }));
+    } catch (error) {
+      console.error("Error updating document:", error);
+    }
+  };
+
   const updateGroupMembers = (groupId, newMemberCount) => {
     setGroups((prevGroups) =>
       prevGroups.map((group) =>
@@ -44,25 +60,30 @@ const GroupCard = () => {
       )
     );
   };
-
-
   return (
     <div className="page-Group-Card">
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3">
           {groups.map((group, cardId) => (
             <div className="col GC-col" key={group.id}>
-              <div className="GCard ">
-                          <div className="GCBackground-img"  style={{ backgroundImage: `url(${group.statusPicture})` }}>
-                              <img className="GCAvatar-img" src={group.avatarPicture}   alt="avatar" />
-                          </div>
+              <div className="GCard">
+                <div
+                  className="GCBackground-img"
+                  style={{ backgroundImage: `url(${group.statusPicture})` }}
+                >
+                  <img
+                    className="GCAvatar-img"
+                    src={group.avatarPicture}
+                    alt="avatar"
+                  />
+                </div>
                 <div className="GCard-body">
                   <div className="GCard-title">{group.title}</div>
                   <div className="GCGroup-status">
                     {group.status === "Public" ? (
                       <i className="bi bi-globe GCIcon"></i>
                     ) : (
-                      <i className="bi bi-lock  GCIcon"></i>
+                      <i className="bi bi-lock GCIcon"></i>
                     )}
                     {group.status} Group
                   </div>
@@ -76,11 +97,24 @@ const GroupCard = () => {
                       <div className="GCText">Post per day</div>
                     </div>
                   </div>
-                    <div className="GCMembers-list">
-                      <img className="GCMember-list-img" src={group.listPicture} alt="Member list" />
-                    </div>
+                  <div className="GCMembers-list">
+                    <img
+                      className="GCMember-list-img"
+                      src={group.listPicture}
+                      alt="Member list"
+                    />
+                  </div>
                 </div>
+                <div className="GCButton">
+              <BottomCard
+                group={group}
+                joinStatus={joinStatus[group.id]}
+                setJoinStatus={setJoinStatus}
+                updateGroupMembers={updateGroupMembers}
+              />
               </div>
+              </div>
+             
             </div>
           ))}
         </div>
