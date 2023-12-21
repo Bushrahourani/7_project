@@ -1,0 +1,91 @@
+.App{
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.App-header {
+  height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/537475374/photo/background-digital-collage-or-typography-design-wallpaper-texture.jpg?s=2048x2048&w=is&k=20&c=C5KYHazOpgtOchOHqF0ZclFFe5O6tWY4EbdNmTu4Rd0=");
+  background-color: rgb(36, 43, 42); 
+  background-blend-mode: multiply; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.search-text{
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+
+.search-events{
+  background-color: aliceblue;
+  width: 50%;
+  height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+#root > div > header > div.row.w-75 > div > svg{
+
+  color: rgb(0, 0, 0);
+  font-size: 64px;
+}
+
+.categories{
+  position: relative;
+  top: 80px;
+}
+
+.filling{
+  width: 100%;
+  height: 100vh;
+}
+
+
+footer{
+  height: 40vh;
+  width: 100%;
+  
+}
+
+
+
+#root > div > footer > div:nth-child(2) > p > svg{
+  margin-right: 6px;
+
+}
+
+.find{
+  font-size: 64px;
+}
+
+
+
+#root > div > header > div.search-events.bg-light.d-flex.flex-column.justify-content-between.p-5 > div > select{
+  --bs-form-select-bg-img: url('https://cdn3.iconfinder.com/data/icons/objects/512/Sniper_B-512.png');
+}
+
+.category-icon{
+  width: 80px;
+  height: 80px;
+}
+
+.find-2{
+  font-size: 24px;
+}
+
+
+.breaker{
+  color: rgba(0, 0, 0, 0.521);
+}
