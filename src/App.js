@@ -1,14 +1,12 @@
-
-
-
+// import './App.css';
+import AllB from './components/subNav/AllB';
 function App() {
-
-
-    return (
-        <div className="App">
-            <div>Hi</div>
-        </div>
-    );
+  return(
+  <div>
+  <header>
+  <AllB/>
+  </header>
+  </div>
+  );
 }
-
 export default App;
