@@ -1,12 +1,20 @@
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FirstPage from "./components/Pages/FirstPage";
+import SecondPage from "./components/Pages/SecondPage";
+
+
 
 function App() {
 
 
     return (
-        <div className="App">
-            <div>Hi</div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element = {<FirstPage></FirstPage>}></Route>
+                <Route path="/S" element = {<SecondPage></SecondPage>}></Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

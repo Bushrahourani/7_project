@@ -6,7 +6,7 @@ font-size:x-large;
 font-weight:600;
 font-family:Arial, Helvetica, 'sans-serif';
 position: relative;
-left: 7rem;
+
 }
 #alphabeticalStyling{
     border: 2px solid #e7e6e6;
@@ -19,8 +19,6 @@ left: 7rem;
     background-color: #e6f5f8; 
     color: rgb(0, 128, 255);
     font-family:Verdana, Geneva, Tahoma, sans-serif; 
-    margin-right: 1.5rem;
-
 }
 .arrwoStyling{
      font-size: 12px;
@@ -34,6 +32,5 @@ color: rgb(58, 58, 58);
 .plusStyiling{
     font-weight:bolder;
 }
-.p-3 {
-    width: 90rem;
-}
+
+
