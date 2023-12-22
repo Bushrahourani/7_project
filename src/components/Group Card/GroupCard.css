@@ -1,0 +1,78 @@
+
+.page-Group-Card{
+    justify-content: center;
+}
+
+.GC-col{
+    padding: 5px;
+    margin: 0px;
+}
+.GCard{
+    padding: 0;
+    margin: 5px;
+    border: 1px ;
+    border-style: solid;
+    border-color: rgba(153, 153, 153, 0.425);
+    border-radius: 3px;
+} 
+
+.GCard-title{
+    font-size: x-large;
+    font-weight: bold;
+    margin: 0;
+}
+.GCGroup-status{
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.GCNumber{
+    font-size: large;
+    font-weight: bold;
+}
+
+.GCText{
+    font-size: small; 
+}
+
+.GCMembers-num{
+    border-right: 1px solid rgba(48, 48, 48, 0.644);
+    height: 40px;
+}
+
+.GCStatistical-info{
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.GCMember-list-img{
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.GCFard-footer{
+    background-color: white;
+}
+
+.GCBackground-img{
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.GCAvatar-img{
+    border-radius: 50%;
+    width: 75px;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.GCIcon{
+    margin-right: 5px;
+}
+.GCButton{
+    border-top: 1px solid rgba(153, 153, 153, 0.425);
+    
+}
