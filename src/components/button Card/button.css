@@ -1,0 +1,19 @@
+.join-group {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color;
+  border-style: none;
+  margin: 20px 0;
+  border-radius: 5px;
+  
+}
+
+.join-group.joined {
+  background-color: #fbe8eb;
+    color:#db3375;
+}
+
+.join-group:not(.joined) {
+  background-color: #e9f8f3;
+    color: #60c39b;
+}
