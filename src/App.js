@@ -1,14 +1,9 @@
-
-
-
+import AllECard from "./components/EventsCard/AllECard.js";
 function App() {
-
-
     return (
-        <div className="App">
-            <div>Hi</div>
-        </div>
+        <header>
+        <AllECard />
+        </header>
     );
 }
-
 export default App;

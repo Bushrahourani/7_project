@@ -1,0 +1,66 @@
+.card{
+  width: 100%;
+  max-width: 20rem;
+}
+.textStyling{
+    color: rgb(112, 112, 112);
+    font-family:"Inter", sans-serif;
+    font-weight:500;    
+    margin-bottom:0.125rem;
+}
+.cardTitle{
+    font-weight:bold;
+    font-size:1.2rem;
+}
+#Title{
+    font-weight: bolder;
+    font-size: 1.3rem;
+     margin-left: 8rem;      
+}
+.material-icons{
+    color: #0f6fec;
+    border: 0.125rem ;
+    padding: .4rem;
+    border-radius: .5rem;
+    background-color: #ccedfc;
+    font-size: 2rem;
+    
+}
+.material-icons-button{
+    border: none;
+    background: none;
+}
+#edit{
+    display: flex;
+}
+.btn.btn-outline-success{
+    height: 45px;
+    margin-right: 2%;
+    width: 15rem;
+}
+#View{
+text-decoration: none;
+margin-right: 8rem;
+
+}
+ .fa-thumbs-up{
+    width: 1rem;  
+}
+ .btn-primary{
+    width: max-content;
+    margin-left:1.1rem ;
+    height: 2.3rem;
+}
+.card-img-top{  
+      margin-bottom: -.8rem;
+}
+.badge {
+    position: absolute;
+    top: .5rem;
+    right:.6rem;
+    height:1.5rem;
+    width: 4rem;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: medium;
+    font-weight: 100;
+}
