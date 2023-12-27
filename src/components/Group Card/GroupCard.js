@@ -34,24 +34,6 @@ const GroupCard = () => {
 
     getGroups();
   }, []);
-  const handleJoinLeave = async (groupId) => {
-    const currentStatus = joinStatus[groupId];
-    const newStatus = !currentStatus;
-    const groupRef = doc(db, "groups", groupId);
-
-    try {
-      await updateDoc(groupRef, {
-        buttonValue: newStatus ? "Joined" : "Not Joined",
-      });
-
-      setJoinStatus((prevStatus) => ({
-        ...prevStatus,
-        [groupId]: newStatus,
-      }));
-    } catch (error) {
-      console.error("Error updating document:", error);
-    }
-  };
 
   const updateGroupMembers = (groupId, newMemberCount) => {
     setGroups((prevGroups) =>
@@ -64,7 +46,7 @@ const GroupCard = () => {
     <div className="page-Group-Card">
       <div className="container text-center">
         <div className="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3">
-          {groups.map((group, cardId) => (
+          {groups.map((group) => (
             <div className="col GC-col" key={group.id}>
               <div className="GCard">
                 <div
